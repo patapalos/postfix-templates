@@ -3,9 +3,11 @@
 # loggerDebug
 .logdv : logdv
     java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.debug($expr$);
+    java.lang.Number    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.debug("$expr$ = {}", $expr$);
     java.lang.Object    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.debug("$expr$ = {}", $expr$);
 
 # loggerInfo
 .logiv : logiv
     java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.info($expr$);
+    java.lang.Number    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.info("$expr$ = {}", $expr$);
     java.lang.Object    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.info("$expr$ = {}", $expr$);
