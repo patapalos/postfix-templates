@@ -1,10 +1,11 @@
 # My postfix templates
 
 # loggerDebug
-.logdv : slf4j logdv
+.logdv : logdv
     java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.debug($expr$);
     java.lang.Throwable [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.debug($msg$, $expr$);
-    
-.logiv : slf4j logdv
+
+# loggerInfo
+.logiv : logiv
     java.lang.String    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.info($expr$);
     java.lang.Object    [org.slf4j.Logger]          → $log:variableOfType("org.slf4j.Logger"):"logger"$.info($msg$, $expr$);
